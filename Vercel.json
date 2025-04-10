@@ -17,7 +17,7 @@
   "functions": {
     "api/proxy.ts": {
       "runtime": "nodejs18.x",
-      "memory": 1024
+      "memory": 64
     }
   }
 }
