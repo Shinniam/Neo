@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "pages/api/**/*.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "pages/**/*",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    { "src": "/api/proxy", "dest": "/api/proxy" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "functions": {
+    "api/proxy.ts": {
+      "runtime": "nodejs18.x",
+      "memory": 1024
+    }
+  }
+}
